@@ -1,2 +1,2 @@
 # 25VA251
-Web Development (JS)
+Web Development (JavaScript)

@@ -8,72 +8,127 @@
 <body>
     <h2>Java Script</h2>
     <script>
-        // variable declaration in JS using var keyword 
-        var myNAME="ABES";
-        document.write(myNAME);
-        console.log(myNAME);
-        console.log(typeof(name));
+        // // variable declaration in JS using var keyword 
+        // var myNAME="ABES";
+        // document.write(myNAME);
+        // console.log(myNAME);
+        // console.log(typeof(myName));
 
-        function hello(){
-            var msg="Demo";
-            console.log(msg);
+        // function hello(){
+        //     var msg="Demo";
+        //     console.log(msg);
+        // }
+        // hello();
+
+        // let msg="Welcome to ABES";
+        // console.log(msg);
+
+        // // JS variable data types
+        // //primitive - string, number, boolean, undefined, symb
+
+        // //string
+        // let name="ABES";
+        // console.log(name);
+        // console.log(typeof(name));
+
+        // //number
+        // let myCount = 9949893938949;
+        // console.log(myCount)
+        // console.log(typeof(myCount));
+
+        // // Boolean
+        // let courseDone = false;
+        // console.log(courseDone);
+        // console.log(typeof(courseDone));
+
+
+        // //Null
+        // let add = null;
+        // console.log(null);
+        // console.log(typeof(null));
+
+        // //Undefined
+        // let email;
+        // console.log(email);
+        // console.log(typeof(email));
+
+        // //Bigint
+        // let bigAmount = BigInt(934784835384099309039493);
+        // console.log(bigAmount);
+        // console.log(typeof(bigAmount));
+
+        // let val1=Symbol('hello');
+        // let val2=Symbol('Hello');
+        // console.log(val1==val2);
+        // console.log(typeof(val1));
+        //object {} - it is a collection of keys(property) and its value
+        
+        //create object - literal {} and new keyword
+        //create object for student    
+        
+        // let student = {
+        //     name : "Aman",
+        //     mob : "3847629874343",
+        //     email : "aman.00@gmail.com",
+        //     ismarried : false,
+        //     address : { streetNo:2,
+        //         area:"Indirapuram",
+        //         pincode: 201014,
+        //         dst:"Ghaziabad",
+        //     },
+        //     id : 2503215300025,
+        //     getInfo:function(){
+        //         return "my details are " + student.id + "and" + student.name;
+        //     },
+        //     examDone:null   
+        // }
+        // // console.log(myinfo);
+        // // console.log(myinfo.email);
+
+        // let num = [1,2,3,4,5,6];
+        // console.log(num[0]);
+        
+        // console.log(student);
+        // console.log(student.address);
+        // console.log(typeof(student));
+
+        // //access object's properties/keys
+        // console.log(student.getInfo());
+
+        // console.log('id' in student);
+        // console.log(delete student.ismarried);
+
+        // let studentkeys=Object.keys(student);
+        // console.log(studentkeys.length);
+        // for(let i=0; i<studentkeys.length;i++){
+        //     console.log(student[studentkeys[i]]);
+        // }
+
+        // for(let x in student){
+        //     console.log(student[x]);
+        // }
+        
+        // let students=['Aman','Faraz','Akshat','Dhruv','Ronak']
+        // for(let i=0; i<students.length; i++){
+        //     console.log(students[i]);
+        // }
+
+        // // create object using 'new' keyword
+        // let myinfo=new Object();
+        // myinfo.name="AMAN";
+        // myinfo.age=20;
+        // myinfo.height=181;
+
+        
+        // if condition
+        let age=18;
+        if(age<18){
+            console.log("Not Valid")
         }
-        hello();
-
-        let msg="Welcome to ABES";
-        console.log(msg);
-
-        // JS variable data types
-        //primitive - string, number, boolean, undefined, symb
-
-        //string
-        let name="ABES";
-        console.log(name);
-        console.log(typeof(name));
-
-        //number
-        let myCount = 9949893938949;
-        console.log(myCount)
-        console.log(typeof(myCount));
-
-        // Boolean
-        let courseDone = false;
-        console.log(courseDone);
-        console.log(typeof(courseDone));
-
-
-        //Null
-        let add = null;
-        console.log(null);
-        console.log(typeof(null));
-
-        //Undefined
-        let email;
-        console.log(email);
-        console.log(typeof(email));
-
-        //Bigint
-        let bigAmount = BigInt(934784835384099309039493);
-        console.log(bigAmount);
-        console.log(typeof(bigAmount));
-
-        let val1=symbol('hello');
-        let val2=symbol('Hello');
-        console.log(val1==val2);
-        console.log(typeof(val1));
-
-        let myInfo = {
-            name : "Aman",
-            mob : "3847629874343",
-            email : "aman.00@gmail.com",
-            ismarried : false,
-            address : null
+        else{
+            console.log("Valid")
         }
-        console.log(myinfo);
-        console.log(myinfo.email);
 
-        let num = [1,2,3,4,5,6];
-        console.log(num[0]);
     </script>
 </body>
 </html>
