@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+<body>
+    <script>
+        // /Functions:- In JavaScript, a function is a reusable blocks of code designed to perform specific tasks. 
+
+        // synchronous and asynchronous fxn
+
+
+        //normal function
+        //without parameters
+        function demo(){
+            console.log("Hello JS");
+        }
+        demo();//function calling
+
+        //with parameters
+        function demo1(text){
+            console.log("Hello " + text)
+        }
+        demo1("react");
+
+        function cal(a,b=9){
+            console.log("addition of two number is " + (a+b));
+        }
+        cal(12);
+
+        //Anonymous functions in JavaScript are functions without a name, 
+        //defined using the function keyword without an identifier or using arrow syntax (=>)
+
+        let msg = function(){
+            console.log("Hello Advanced JS");
+        };
+        msg();
+
+        //shore code for above function i.e arrow function
+        let msg1=()=>console.log("Hello function as an arrow");
+        msg1();
+
+        // arrow function using multilines
+
+        let add=(a,b)=>{
+            console.log("First nummber is " + a);
+            console.log("Second number is " + b);
+            console.log("addition of two number is " + (a+b));
+        }
+        add(4,5);
+
+        // IIFE : Immediately Invoked Function Expression
+        (function(){
+            console.log("IIFE")
+        });
+        (()=>console.log("IIFE using arrow"));
+
+        // callback function
+        function greet(name, callback) {
+            console.log("Hello, " + name);
+            callback();
+        }
+        
+        function sayBye() {
+            console.log("Goodbye!");
+        }
+        
+        greet("Aman", sayBye);
+
+        // Map Function
+        const a = [1, 2, 3, 4];
+        // Use map to create a new array with elements doubled
+        const b = a.map(x => x * 2);
+        console.log(b);
+                
+        // filter
+        // JavaScript to illustrate findIndex() method
+        function canVote(age) {
+            return age >= 18;
+        }
+        let filtered = [24, 33, 16, 40].filter(canVote);
+        console.log(filtered);
+        
+        // Reduce 
+        const arr = [2, 4, 6];
+        // Use reduce to calculate the sum
+        const sum = a.reduce((acc, x) => acc + x, 0);
+        console.log(sum);
+
+        // Promise stages (3 stages)
+        let checkEven = new Promise((resolve, reject) => {
+            let number = 4;
+            if (number % 2 === 0) resolve("The number is even!");
+            else reject("The number is odd!");
+        });
+        checkEven
+            Promise.then((message) => console.log(message))
+            .catch((error) => console.error(error))
+            .finally(() => {
+                console.log(
+                    "This is finally() block that is executed after Promise is settled"
+                );
+            });
+
+            // Async Await
+            async function userdata() {
+                try{
+                    let data = await fetch('https://dummyjson.com/products');
+                    let updatedData=await data.json;
+                    console.log(updatedData);
+                }
+                catch(error){
+                    console.log("Not fetched"+error);
+                }
+            }
+            userdata();
+
+
+        
+            
+
+    </script>
+</body>
+</html>
