@@ -96,28 +96,40 @@
             else reject("The number is odd!");
         });
         checkEven
-            Promise.then((message) => console.log(message))
+            .then((message) => console.log(message))
             .catch((error) => console.error(error))
             .finally(() => {
                 console.log(
                     "This is finally() block that is executed after Promise is settled"
                 );
             });
-
-            // Async Await
-            async function userdata() {
-                try{
-                    let data = await fetch('https://dummyjson.com/products');
-                    let updatedData=await data.json;
-                    console.log(updatedData);
-                }
-                catch(error){
-                    console.log("Not fetched"+error);
-                }
+        // Async Await
+        async function userdata() {
+            try{
+                let data = await fetch('https://dummyjson.com/products');
+                let updatedData=await data.json;
+                console.log(updatedData);
             }
-            userdata();
+            catch(error){
+                console.log("Not fetched"+error);
+            }
+        }
+        userdata();
+        // Local storage
+        let userInfo={
+            name:'Aman',
+            age:20,
+            mob:8212383752,
+            email:'aman00@gmail.com'
+        }
 
+        // convert JSON object to string
+        localStorage.setItem('preferences',JSON.stringify(userInfo));
 
+        // Retrieve the string and parse it back into an object
+        let storagePreference=JSON.parse(localStorage.getItem('preferences'));
+        console.log(storagePreference.name);
+        
         
             
 
